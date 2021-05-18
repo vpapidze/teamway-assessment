@@ -1,11 +1,9 @@
 import checkPropTypes from 'check-prop-types';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 
  import rootReducer from '../Domain/rootReducer';
-// import { middlwwares } from '../src/configureStore';
 
 export const storeFactory = (init) => {
-  //const crtwith = applyMiddleware([])(createStore);
   return createStore(rootReducer, init);
 }
 
